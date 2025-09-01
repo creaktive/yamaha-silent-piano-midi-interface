@@ -4,7 +4,7 @@
 
 Replacement for the Switch Box Unit of a compatible Yamaha Silent Piano.
 
-## BOM
+## Bill Of Materials
 
  - Raspberry Pi Pico
  - 6-pin mini-DIN socket (PED connector)
@@ -26,8 +26,12 @@ Replacement for the Switch Box Unit of a compatible Yamaha Silent Piano.
 ```sh
 # Install the CLI utility
 brew install mpremote
+
 # Copy the local main.py file to RPi Pico
 mpremote fs cp main.py :main.py
+
+# Perform a soft-reset of the device
+mpremote soft-reset
 ```
 
 ## References

@@ -109,13 +109,13 @@ class MidiIO:
 
     # Public helpers
     def send_cc(self, cc_num: int, value: int):
-        self._write3(self._status_cc, cc_num & 0x7F, max(0, min(127, value)))
+        self._write3(self._status_cc, cc_num, value)
 
     def note_on(self, note: int, vel: int):
-        self._write3(self._status_note_on, note & 0x7F, max(0, min(127, vel)))
+        self._write3(self._status_note_on, note, vel)
 
     def note_off(self, note: int, vel: int):
-        self._write3(self._status_note_off, note & 0x7F, max(0, min(127, vel)))
+        self._write3(self._status_note_off, note, vel)
 
     # MIDI byte-by-byte decoder with running status
     def feed(self, mb: int):

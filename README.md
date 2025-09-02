@@ -42,8 +42,8 @@ brew install mpremote
 # Copy the local main.py file to RPi Pico
 mpremote fs cp main.py :main.py
 
-# Perform a soft-reset of the device
-mpremote soft-reset
+# Reboot
+mpremote reset
 ```
 
 ## References

@@ -181,8 +181,8 @@ class PedalController:
         return (self.adc.read_u16() >> 9) & 0x7F
 
     def _read_soft(self) -> int:
-        # Active-low input -> 0 => pressed => 127
-        return 0 if self.soft.value() else 127
+        # Active-high input
+        return 127 if self.soft.value() else 0
 
     def _on_tick(self, t):
         # Sustain (ADC smoothed)

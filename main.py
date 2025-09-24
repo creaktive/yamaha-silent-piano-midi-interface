@@ -156,17 +156,6 @@ class MidiIO:
                     self.note_on(self.note_tmp, self.level_tmp)
                 self.note_tmp = 0
                 self.level_tmp = 0
-        elif self.running_status == self._status_cc:
-            if self.note_tmp == 0:
-                self.note_tmp = mb
-            else:
-                self.level_tmp = mb
-                if self.note_tmp == 0x30 and self.level_tmp == 0x40:
-                    self.uart_out.write(bytes((0xb0, 0x30, 0x40)))
-                else:
-                    self.send_cc(self.note_tmp, self.level_tmp)
-                self.note_tmp = 0
-                self.level_tmp = 0
         else:
             # Other statuses not handled here
             pass

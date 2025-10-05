@@ -36,7 +36,7 @@ class Logger:
 
 class Keyboard:
     def __init__(self):
-        self.uart = busio.UART(tx=board.GP4, rx=board.GP5, baudrate=31250, timeout=1.0)
+        self.uart = busio.UART(tx=board.GP4, rx=board.GP5, baudrate=31250, timeout=5.0)
 
     def read(self, n: int):
         data = self.uart.read(n)
@@ -94,7 +94,8 @@ class Pedals:
         sust = (self.sust.value >> 9) & 0x7F
 
         # Sensitivity threshold
-        if sust <= 2:
+        # TODO: try to lower after everything is soldered
+        if sust <= 20:
             sust = 0
 
         if self.sust_state == sust:
@@ -108,8 +109,14 @@ if __name__ == '__main__':
     pedals = Pedals()
     usb = usb_midi.ports[1]
 
-    # handshake
+    time.sleep(5)
+
+    # Handshake
+    # < (0xF0, 0x43, 0x73, 0x32, 0x15, 0xF7)
+    # < (0xF0, 0x7E, 0x00, 0x06, 0x01, 0xF7)
     keyboard.read(12)
+    # < (0xB0, 0x30, 0x40)
+    keyboard.read(3)
     keyboard.write(bytes((0xB0, 0x30, 0x40)))
 
     while True:
@@ -128,3 +135,4 @@ if __name__ == '__main__':
             keyboard.write(msg)
 
         Logger.update()
+

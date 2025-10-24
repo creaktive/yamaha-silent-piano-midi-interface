@@ -19,6 +19,7 @@ units of the Yamaha Silent Piano!
 ## Bill Of Materials
 
  - Raspberry Pi Pico 2
+ - [Pico Proto Board](https://www.kiwi-electronics.com/en/pico-proto-board-10506)
  - 6-pin mini-DIN socket (PED connector)
  - 8-pin mini-DIN socket (KEY connector)
  - H11L1 optoisolator

@@ -31,9 +31,9 @@ units of the Yamaha Silent Piano!
 
 ## Schematic & Assembly diagram
 
-![schematic](./schematic.png)]
+![schematic](./schematic.png)
 
-![assembly](./assembly.png)]
+![assembly](./assembly.png)
 
 ## Deployment
 

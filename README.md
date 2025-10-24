@@ -29,9 +29,11 @@ units of the Yamaha Silent Piano!
  - 1x 470Ω resistor
  - 100nF capacitor
 
-## Schematic
+## Schematic & Assembly diagram
 
 ![schematic](./schematic.png)]
+
+![assembly](./assembly.png)]
 
 ## Deployment
 

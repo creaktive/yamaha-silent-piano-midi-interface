@@ -94,9 +94,8 @@ class Pedals:
         sust = (self.sust.value >> 9) & 0x7F
 
         # Sensitivity threshold
-        # TODO: try to lower after everything is soldered
-        if sust <= 20:
-            sust = 0
+        # if sust <= 20:
+        #     sust = 0
 
         if self.sust_state == sust:
             return None

@@ -2,11 +2,15 @@
 
 ## Description
 
-Replacement for the Switch Box Unit of a compatible Yamaha Silent Piano.
+Replacement for the Switch Box Unit of a compatible Yamaha Silent Piano:
+
+![original](./original.png)
+
 Should work on any of these models:
 
  - YM5SD/YU11SD/YU11W-SD
  - YU33SD/YU33W-SD
+ - probably others, since Yamaha is strong on modular reusable components
 
 Why replacing it, you might ask? Well, to put it mildly, this specific part of
 the piano did not age well... Modern synths can produce a far more convincing

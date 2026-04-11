@@ -36,6 +36,10 @@ units of the Yamaha Silent Piano!
 
 ![assembly](./assembly.png)
 
+## Final version (without Pico attached)
+
+![final](./final.jpg)
+
 ## Deployment
 
 1. [Download & flash the latest CircuitPython firmware](https://circuitpython.org/board/raspberry_pi_pico2/) (10.0.0 at the time of writing)

@@ -71,7 +71,7 @@ class Pedals:
     def _update(self):
         now = time.monotonic()
         if self.next_update == None or self.next_update <= now:
-            self.next_update = now + 0.01
+            self.next_update = now + 0.02
             return True
         return False
 

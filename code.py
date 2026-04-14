@@ -108,7 +108,7 @@ if __name__ == '__main__':
     pedals = Pedals()
     usb = usb_midi.ports[1]
 
-    time.sleep(5)
+    time.sleep(2)
 
     # Handshake
     keyboard.write(bytes((0xF0, 0x43, 0x71, 0x10, 0x05, 0x01, 0x00, 0x02, 0xF7)))

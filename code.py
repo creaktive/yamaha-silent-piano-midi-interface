@@ -15,7 +15,7 @@ class Logger:
             self.led = digitalio.DigitalInOut(board.LED)
             self.led.direction = digitalio.Direction.OUTPUT
 
-        if self.led.value and time.monotonic() >= self.last_event + 0.001:
+        if self.led.value and time.monotonic() >= self.last_event + 0.01:
             self.led.value = False
 
     @classmethod

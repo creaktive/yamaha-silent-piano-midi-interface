@@ -51,12 +51,11 @@ class Keyboard:
         Logger.print('>', data)
         return n
 
-    def update(self):
-        n = self.uart.in_waiting
-        if n == 0:
+    def update(self, expected=3):
+        if self.uart.in_waiting == 0:
             return None
 
-        return self.read(n)
+        return self.read(expected)
 
 class Pedals:
     next_update = None

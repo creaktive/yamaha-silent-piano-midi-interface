@@ -93,8 +93,8 @@ class Pedals:
         sust = (self.sust.value >> 9) & 0x7F
 
         # Sensitivity threshold
-        # if sust <= 20:
-        #     sust = 0
+        if sust <= 2:
+            sust = 0
 
         if self.sust_state == sust:
             return None
